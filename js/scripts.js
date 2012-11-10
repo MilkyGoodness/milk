@@ -29,7 +29,8 @@ $(document).ready(function(){
     });
     
     $(".items").click(function() {
-        $("#notification").fadeIn().delay(2000).fadeOut();
+        $("#notification").fadeIn().delay(1200).fadeOut();
     });
 
 });
+
