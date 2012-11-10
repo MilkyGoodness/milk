@@ -1,7 +1,9 @@
 $(document).ready(function(){
 
-    $(".items").hover(function() {
-        $(this).children[0].css("left", -150);
+    $(".items img").hover(function() {
+        $(this).css("left", -200);
+    }, function() {
+        $(this).css("left", 0);
     });
 
 });

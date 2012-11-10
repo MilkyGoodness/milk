@@ -123,7 +123,8 @@ form {
 }
 
 .items img {
-    left: 0;
+    left: 0px;
+    position: relative;
 }
 
 #featured-list .items:nth-child(5n+5), #popular-list .items:nth-child(5n+5) {
