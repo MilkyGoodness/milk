@@ -48,6 +48,13 @@ html, body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+#blue {
+    position: absolute;
+    width: 100%;
+    height: 400px;
+    background: #77c4ff;
+}
+
 #wrapper {
     position: relative;
     width: 960px;
@@ -60,7 +67,7 @@ html, body {
     position: relative;
     width: 400px;
     height: 200px;
-    top: 80px;
+    top: 40px;
     margin: 0 auto;
     background: url("../img/logo.png");
     background-size: 100%;
@@ -119,7 +126,7 @@ form {
     position: relative;
     width: 500px;
     margin: 0 auto;
-    top: 100px;
+    top: 60px;
 }
 
 .af-outer {
@@ -137,15 +144,6 @@ form {
     border-radius: 10px;
 }
 
-#af-showreq:checked ~ .af-form .af-outer:not(.af-required) {
-    height: 0px;
-    visibility: hidden;
-}
-#af-showreq:checked ~ .af-form .af-outer:not(.af-required) .af-inner {
-    transform: scale(0);
-    opacity: 0;
-}
-
 /* Items ------------------------------ */
 #item-list, #featured-list, #popular-list {
     position: relative;
@@ -159,6 +157,10 @@ form {
     display: none;
 }
 
+#popular-list {
+    padding-bottom: 150px;
+}
+
 #featured-list, #popular-list {
     margin-bottom: 50px;
 }
@@ -169,7 +171,7 @@ form {
     float: left;
     margin: 0 53px 20px 0;
     overflow: hidden;
-    border-radius: 14px;
+    border-radius:14px;
 }
 
 .items img {
