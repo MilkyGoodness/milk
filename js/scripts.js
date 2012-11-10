@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+    $("#confirm").click(function() {
+        $("a.confirm").removeClass('confirm').addClass('event');
+    });
+
     $(".items img").hover(function() {
         $(this).css("left", -200);
         $('.duration').show();
@@ -23,7 +27,9 @@ $(document).ready(function(){
             $("#popular-list").fadeIn();
         }
     });
-
     
+    $(".items").click(function() {
+        $("#notification").fadeIn().delay(2000).fadeOut();
+    });
 
 });
