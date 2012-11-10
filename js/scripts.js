@@ -2,8 +2,14 @@ $(document).ready(function(){
 
     $(".items img").hover(function() {
         $(this).css("left", -200);
+        $('.duration').show();
     }, function() {
         $(this).css("left", 0);
+        $('.duration').hide();
+    });
+
+    $(".duration").hover(function() {
+        $(this).css("font-weight", bold);
     });
 
     $("#search-box").keyup(function() {
@@ -17,5 +23,7 @@ $(document).ready(function(){
             $("#popular-list").fadeIn();
         }
     });
+
+    
 
 });
