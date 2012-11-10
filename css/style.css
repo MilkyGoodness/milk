@@ -31,7 +31,12 @@ a:hover, a:active {outline: 0;}
 ::selection {background: #55fcd5; color: #fff; text-shadow: none;}
 
 /* Typography ------------------------------ */
-
+h1 {
+    position: relative;
+    width: 150px;
+    height: 20px;
+    margin-bottom: 20px;   
+}
 
 /* Basic styles ------------------------------ */
 
@@ -48,16 +53,16 @@ html, body {
     width: 960px;
     height: auto;
     margin: 0 auto;
-    background: red;
 }
 
 #logo {
     position: relative;
     width: 400px;
     height: 150px;
-    top: 120px;
+    top: 80px;
     margin: 0 auto;
-    background: #888;
+    background: url("../img/logo.png");
+    background-size: 100% 100%;
 }
 
 /* Form fields ------------------------------ */
@@ -66,7 +71,6 @@ form {
     width: 500px;
     margin: 0 auto;
     top: 130px;
-    background: red;
 }
 
 .af-outer {
@@ -93,7 +97,7 @@ form {
 }
 
 /* Items ------------------------------ */
-#item-list {
+#item-list, #featured-list, #popular-list {
     position: relative;
     top: 200px;
     width: 960px;
@@ -101,14 +105,34 @@ form {
     overflow: hidden;
 }
 
-.items {
-    width: 170px;
-    height: 150px;
-    float: left;
-    background: red;
-    margin: 0 50px 30px 0;
+#item-list {
+    display: none;
 }
 
+#featured-list, #popular-list {
+    margin-bottom: 50px;
+}
+
+.items {
+    width: 200px;
+    height: 250px;
+    float: left;
+    background: red;
+    margin: 0 53px 20px 0;
+    overflow: hidden;
+}
+
+.items img {
+    left: 0;
+}
+
+#featured-list .items:nth-child(5n+5), #popular-list .items:nth-child(5n+5){
+    margin: 0 0 20px 0;
+}
+
+#item-list .items:nth-child(4n+4){
+    margin: 0 0 20px 0;
+}
 
 
 /* Media Queries ---------------------------------- */
