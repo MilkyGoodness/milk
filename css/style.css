@@ -126,12 +126,65 @@ form {
     left: 0;
 }
 
-#featured-list .items:nth-child(5n+5), #popular-list .items:nth-child(5n+5){
+#featured-list .items:nth-child(5n+5), #popular-list .items:nth-child(5n+5) {
     margin: 0 0 20px 0;
 }
 
-#item-list .items:nth-child(4n+4){
+#item-list .items:nth-child(4n+4) {
     margin: 0 0 20px 0;
+}
+
+/* Checkout ---------------------------------- */
+
+#cal {
+    width:280px;
+    font-family:arial, helvetica, sans-serif;
+    font-size:9pt; /* this will fit in our 30x30px box nicely */
+    color:#000;
+    text-align:center;
+    line-height:30px;
+}
+
+#cal h2 {
+    width:270px;
+    margin:0 5px 5px 5px;
+    font-size:12pt;
+    background:#004a80;
+    color:#fff;
+}
+
+#cal ul {
+    width:280px;
+    margin:0;
+    padding:0;
+}
+
+#cal ul li {
+    width:30px;
+    height:30px;
+    display:block;
+    float:left;
+    list-style:none;
+    border:5px solid #fff;
+    margin:0;
+}
+
+#cal ul li.day {
+    background:#666;
+    color:#fff;
+    font-weight:bold;
+}
+ 
+#cal ul li.num { background:#ccc; }
+
+#cal a.event {
+    display:block;
+    width:30px;
+    height:30px;
+    background:#6dcff6;
+    text-decoration:none;
+    color:#004a80;
+    font-weight:bold;
 }
 
 
