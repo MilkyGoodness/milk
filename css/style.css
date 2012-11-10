@@ -76,6 +76,22 @@ html, body {
     background-size: 100%;
 }
 
+select#categories {
+    position: relative;
+    top: 150px;
+    left: 250px;
+    width: 150px;
+    font-size: 25px;
+}
+
+select#sort-by{
+    position: relative;
+    top: 150px;
+    left: 400px;
+    width: 150px;
+    font-size: 25px;
+}
+
 /* Form fields ------------------------------ */
 form {
     position: relative;
