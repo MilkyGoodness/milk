@@ -84,7 +84,6 @@ html, body {
     background-size: 100%;
 }
 
-<<<<<<< HEAD
 select#categories {
     position: relative;
     top: 150px;
@@ -99,7 +98,8 @@ select#sort-by{
     left: 400px;
     width: 150px;
     font-size: 25px;
-=======
+}
+
 #notification {
     position: absolute;
     width: 257px;
@@ -109,7 +109,6 @@ select#sort-by{
     margin: 0 auto;
     background: url("../img/notification.png");
     background-size: 100%;
->>>>>>> code code code
 }
 
 /* Form fields ------------------------------ */
