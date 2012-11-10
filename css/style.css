@@ -58,11 +58,11 @@ html, body {
 #logo {
     position: relative;
     width: 400px;
-    height: 150px;
+    height: 200px;
     top: 80px;
     margin: 0 auto;
     background: url("../img/logo.png");
-    background-size: 100% 100%;
+    background-size: 100%;
 }
 
 /* Form fields ------------------------------ */
@@ -85,6 +85,7 @@ form {
     padding: 10px 15px 10px 15px;
     width: 465px;
     font-size: 14px;
+    border-radius: 10px;
 }
 
 #af-showreq:checked ~ .af-form .af-outer:not(.af-required) {
@@ -120,6 +121,7 @@ form {
     background: red;
     margin: 0 53px 20px 0;
     overflow: hidden;
+    border-radius: 14px;
 }
 
 .items img {
