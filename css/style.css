@@ -80,7 +80,7 @@ form {
     transition: all 0.5s linear;
 }
 
-.email-form {
+#search-box {
     position: relative;
     padding: 10px 15px 10px 15px;
     width: 465px;
