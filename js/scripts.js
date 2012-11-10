@@ -30,6 +30,7 @@ $(document).ready(function(){
     
     $(".items").click(function() {
         $("#notification").fadeIn().delay(1200).fadeOut();
+        $("#milk-kart").css("background-position", -40);
     });
 
 });
