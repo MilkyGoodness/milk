@@ -46,7 +46,7 @@ html, body {
 #wrapper {
     position: relative;
     width: 960px;
-    height: 100%;
+    height: auto;
     margin: 0 auto;
     background: red;
 }
