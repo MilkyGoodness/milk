@@ -46,17 +46,7 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'asapregular', Helvetica, sans-serif;
-}
-
-#blue {
-    position: absolute;
-    width: 100%;
-    height: 400px;
     background: #77c4ff;
-    z-index: 1;
-    -moz-box-shadow: 0 0 5px 5px #888;
-    -webkit-box-shadow: 0 0 5px 5px#888;
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 #wrapper {
@@ -135,7 +125,7 @@ select#sort-by{
 /* Form fields ------------------------------ */
 form {
     position: absolute;
-    width: 500px;
+    width: 300px;
     margin-left: -250px;
     left: 50%;
     top: 250px;
