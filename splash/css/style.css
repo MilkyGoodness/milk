@@ -136,6 +136,14 @@ select#sort-by{
     z-index: 10;
 }
 
+
+
+.twitter-follow-button {
+    position: absolute;
+    top: 30px;
+    left: 170px;
+}
+
 /* Form fields ------------------------------ */
 form {
     position: absolute;
@@ -270,6 +278,14 @@ iframe {
     top: 0px;
     margin-left: -140px;
     z-index: 9;
+}
+
+iframe#fb {
+    background: none;
+    position: relative;
+    left: 100px;
+    top: 30px;
+    z-index:50;
 }
 
 div#cover-up {
