@@ -73,10 +73,13 @@ html, body {
     width: 960px;
     height: 300px;
     overflow: hidden;
+    top: 100px;
 }
 
 #steps li {
     float: left;
+    margin-right: 20px;
+
 }
 
 #kart {
@@ -334,6 +337,31 @@ div#cover-up {
 
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
+    #wrapper {
+        position: relative;
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    #logo {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        top: 40px;
+        left: 50%;
+        margin-left: -135px;
+        background: url("../img/logo.png") no-repeat;
+        background-size: 75%;
+        background-position: center;
+        z-index: 10;
+    }
+
+    #steps {
+        width: 222px;
+        height: 900px;
+        margin: 0 auto;
+    }
 }
 
 /* All Mobile Sizes (devices and browser) 
@@ -341,6 +369,40 @@ div#cover-up {
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
+    #wrapper {
+        position: relative;
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+    }
+
+    #logo {
+        position: relative;
+        width: 300px;
+        height: 150px;
+        top: 40px;
+        left: 50%;
+        margin-left: -135px;
+        background: url("../img/logo.png") no-repeat;
+        background-size: 75%;
+        background-position: center;
+        z-index: 10;
+    }
+
+    #steps {
+        width: 222px;
+        height: 900px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+    #wrapper {
+        position: relative;
+        width: 100%;
+    }
+
     #logo {
         position: relative;
         width: 300px;
@@ -349,15 +411,14 @@ div#cover-up {
         margin: 0 auto;
         background: url("../img/logo.png") no-repeat;
         background-size: 75%;
+        background-position: center;
         z-index: 10;
     }
 
     #steps {
-        width: 100%;
+        width: 222px;
+        height: 900px;
+        margin: 0 auto;
     }
-}
-
-/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-@media only screen and (max-width: 479px) {
 }
 
