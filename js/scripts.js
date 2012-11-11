@@ -17,7 +17,7 @@ $(document).ready(function(){
         $('.duration').hide();
     });
 
-    $("#item4").hover(function() {
+    $("#item3").hover(function() {
         $('#item-overlay').show();
     }, function() {
         $('#item-overlay').hide();
@@ -31,14 +31,14 @@ $(document).ready(function(){
     $("#search-box").keyup(function() {
         if ($(this).val()) {
             $("#featured-list").fadeOut();
-            $("#popular-list").fadeOut();
+            $("#popular-list, .popular-list-edit").fadeOut();
             $("#item-list").fadeIn();
-            $("#categories, #sort-by").fadeIn();
+            $("#categories, #price").fadeIn();
         } else {
             $("#item-list").fadeOut();
             $("#featured-list").fadeIn();
-            $("#popular-list").fadeIn();
-            $("#categories, #sort-by").fadeOut();
+            $("#popular-list, .popular-list-edit").fadeIn();
+            $("#categories, #price").fadeOut();
         }
     });
 
@@ -47,16 +47,19 @@ $(document).ready(function(){
     });
     
     $(document).scroll(function() {
-        if ($(document).scrollTop() >= 230) {
-            $('form').css('position', 'fixed');
+        if ($(document).scrollTop() >= 250) {
+            $('form, #icons').css('position', 'fixed');
             $('form').css('top', 20);
+            $('#icons').css('top', 19);
+          
         } else {
-            $('form').css('position', 'absolute');
-            $('form').css('top', 250);
+            $('form, #icons').css('position', 'absolute');
+            $('form').css('top', 300);
+            $('#icons').css('top', 300)
         }
-        if ($(document).scrollTop() >= 310) {
+        if ($(document).scrollTop() >= 320) {
             $('#blue').css('position', 'fixed');
-            $('#blue').css('top', -310)
+            $('#blue').css('top', -320)
         } else {
             $('#blue').css('position', 'absolute');
             $('#blue').css('top', 0)
@@ -72,7 +75,7 @@ $(document).ready(function(){
     // NOTE:: can implement twice a month!
     // NOTE:: need to clear cache after making changes
     $(".items li#demo-1").click(function() {
-        localStorage.setItem('checkoutData','[{id:3,name:"Hamsters",start_date:"2012-07-11",freq:2}]');
+        localStorage.setItem('checkoutData','[{id:3,name:"Starbucks Breakfast Blend",start_date:"2012-07-11",freq:2}]');
     });
 
 });
