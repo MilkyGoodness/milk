@@ -186,6 +186,16 @@ input[type=text]:focus, textarea:focus {
     display: none;
 }
 
+#item-overlay {
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 99;
+    border-radius: 7px;
+    display: none;
+}
+
 #popular-list {
     padding-bottom: 150px;
 }
@@ -230,6 +240,33 @@ input[type=text]:focus, textarea:focus {
     display: none;
 }
 
+.description {
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px;
+    font-family: 'asapregular', Helvetica, sans-serif;
+}
+
+.frequency-list {
+    position: absolute;
+    top: 185px;
+}
+
+.frequency {
+    position: relative;
+    font-size: 14px;
+    line-height: 18px;
+    padding-left: 20px;
+    color: #fff;
+    font-weight: normal;
+}
+
+.frequency:hover {
+    text-decoration: underline;
+    cursor: pointer;
+
+}
 
 /* Checkout ---------------------------------- */
 

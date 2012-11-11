@@ -16,6 +16,12 @@ $(document).ready(function(){
         $(this).css("left", 0);
         $('.duration').hide();
     });
+
+    $("#item4").hover(function() {
+        $('#item-overlay').show();
+    }, function() {
+        $('#item-overlay').hide();
+    });
     /* END action on each item */
 
     $(".duration").hover(function() {
