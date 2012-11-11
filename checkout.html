@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Site Title</title>
+		<title>Milk</title>
 
 		<meta charset="UTF-8">
 		<meta name="robots" content="index, follow">
@@ -18,6 +18,7 @@
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
+
 	<body id="checkout">
             <h1>Your Subscriptions</h1>
             <div id="cal">
@@ -32,7 +33,7 @@
                     <li class="day">Sat</li>
                    
                     <li class="num d1">01</li>
-                    <li class="num d2"><a href="#" class="event">02<br />Contact Glass - 50$</a></li>
+                    <li class="num d2"><a href="#" class="event">02<br />Contact Lenses</a></li>
                     <li class="num d3">03</li>
                     <li class="num d4">04</li>
                     <li class="num d5">05</li>
@@ -40,15 +41,15 @@
                     <li class="num d7">07</li>
                    
                     <li class="num d8">08</li>
-                    <li class="num d9"><a href="#" class="event">09<br />Toilet Paper - 20$</a></li>
+                    <li class="num d9">09</li>
                     <li class="num d10">10</li>
                     <li class="num d11">11</li>
                     <li class="num d12">12</li>
                     <li class="num d13">13</li>
-                    <li class="num d14"><a href="#" class="event">14<br />Gold Leaf Ice Cream - $50</a></li>
+                    <li class="num d14">14</li>
                    
                     <li class="num d15">15</li>
-                    <li class="num d16"><a href="#" class="confirm">16<br /><div class="pdata">Gold Leaf Ice Cream - $50</div></a></li>
+                    <li class="num d16">16</li>
                     <li class="num d17">17</li>
                     <li class="num d18">18</li>
                     <li class="num d19">19</li>
@@ -71,8 +72,8 @@
                 </ul>
             </div>
         <div class="legend">
-            <p><span class="blue"></span> Already Subscribed</p>
-            <p><span class="yellow"></span> To be Subscribe</p>
+            <p><span class="blue"></span> Existing Subscription</p>
+            <p><span class="yellow"></span> New Subscriptions</p>
         </div>
         <div>
             <input type="button" id="confirm" value="Confirm"/>
@@ -82,46 +83,7 @@
 		<script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
 		<script src="js/jquery.quicksand.js"></script>
 		<script src="js/scripts.js"></script>
-
-    <script>
-        function reloadTable() {
-            if(localStorage.getItem('checkoutData').length == 0) return;
-            var lolObj = eval(localStorage.getItem('checkoutData'));
-            var finalData = [];
-
-            $.each(lolObj, function(key, value) {
-                var date = value.start_date.split('-');
-                if(typeof finalData[date[2]] === 'undefined')
-                {
-                    finalData[date[2]] = [];
-                }
-                finalData[date[2]].push(value);
-            });
-
-            for(key in finalData) {
-                $.each(finalData[key], function(subkey,value) {
-                    for(var i = parseInt(key); i <= 31; i=i+parseInt(value.freq)*7)
-                    {
-                        console.log(i+' '+(i+parseInt(value.freq)*7));
-                        var html = $('.d'+i+' .pdata').html();
-                        if(html === null) {
-                            $('.d'+i).html('<a href="#" class="confirm">'+i+'<div class="pdata"></div></a>');
-                            html = '';
-                        } else {
-                            $('.d'+i+" a.event").removeClass('event').addClass('confirm');
-                        }
-
-                        if($('.d'+i+" .pdata ."+value.id).length == 0) {
-                            html += '<div class="'+value.id+'">'+value.name+' - $'+value.price+'</div>';
-                        } $('.d'+i+' .pdata').html(html);
-                    }
-                });
-            } localStorage.setItem('checkoutData','');
-        }
-        reloadTable();
-        setInterval(reloadTable,1000);
-    </script>
-
+		<script src="js/checkout.js"></script>
 	</body>
 </html>
 

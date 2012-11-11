@@ -54,7 +54,6 @@ $(document).ready(function(){
         } else {
             $('#blue').css('position', 'absolute');
             $('#blue').css('top', 0)
-
         }
     });
 
