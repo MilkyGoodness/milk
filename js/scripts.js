@@ -6,7 +6,7 @@ $(document).ready(function(){
         $("#milk-kart").css("background-position", function() {
             return ($("#milk-kart").css("background-position").split('px')[0] - 40);
         });
-        localStorage.setItem('checkoutData','[{id:3,name:"product_3",price:5,start_date:"2012-07-16",freq:1}]');
+        
     });
 
     $(".items img").hover(function() {
@@ -66,6 +66,13 @@ $(document).ready(function(){
     /* CHECKOUT */
     $("#confirm").click(function() {
         $("a.confirm").removeClass('confirm').addClass('event');
+    });
+
+    // send message from product page
+    // NOTE:: can implement twice a month!
+    // NOTE:: need to clear cache after making changes
+    $(".items li#demo-1").click(function() {
+        localStorage.setItem('checkoutData','[{id:3,name:"Hamsters",start_date:"2012-07-11",freq:2}]');
     });
 
 });
