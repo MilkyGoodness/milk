@@ -1,11 +1,12 @@
 $(document).ready(function(){
 
-    $(window).unload(function() {
-        $('body').scrollTop(0);
-    });
-
-    $("#confirm").click(function() {
-        $("a.confirm").removeClass('confirm').addClass('event');
+    /* START action on each item */
+    $(".items").click(function() {
+        $("#notification").fadeIn().delay(1200).fadeOut();
+        $("#milk-kart").css("background-position", function() {
+            return ($("#milk-kart").css("background-position").split('px')[0] - 40);
+        });
+        localStorage.setItem('checkoutData','[{id:3,name:"product_3",price:5,start_date:"2012-07-16",freq:1}]');
     });
 
     $(".items img").hover(function() {
@@ -15,6 +16,7 @@ $(document).ready(function(){
         $(this).css("left", 0);
         $('.duration').hide();
     });
+    /* END action on each item */
 
     $(".duration").hover(function() {
         $(this).css("font-weight", bold);
@@ -33,14 +35,11 @@ $(document).ready(function(){
             $("#categories, #sort-by").fadeOut();
         }
     });
-    
-    $(".items").click(function() {
-        $("#notification").fadeIn().delay(1200).fadeOut();
-        $("#milk-kart").css("background-position", function() {
-            return ($("#milk-kart").css("background-position").split('px')[0] - 40);
-        });
-    });
 
+    $(window).unload(function() {
+        $('body').scrollTop(0);
+    });
+    
     $(document).scroll(function() {
         if ($(document).scrollTop() >= 230) {
             $('form').css('position', 'fixed');
@@ -57,6 +56,11 @@ $(document).ready(function(){
             $('#blue').css('top', 0)
 
         }
+    });
+
+    /* CHECKOUT */
+    $("#confirm").click(function() {
+        $("a.confirm").removeClass('confirm').addClass('event');
     });
 
 });
