@@ -301,6 +301,34 @@ input[type=text]:focus, textarea:focus {
     display: none;
 }
 
+#item-list .items {
+    width: 200px;
+    height: auto;
+    display:inline-block;
+    margin: 0 45px 20px 0;
+    overflow: hidden;
+    border-radius:14px;
+    float:none;
+}
+
+#item-list .items .detail {
+    background:#77c4ff;
+    color:white;
+    padding:10px;
+    padding-bottom:10px;
+}
+
+#item-list .items .detail .name {
+  font-size:12px;
+
+}
+
+#item-list .items .detail .price {
+  font-size:16px;
+  margin-bottom:10px;
+  font-weight:bold;
+}
+
 .description {
     color: #fff;
     font-size: 14px;
