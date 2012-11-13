@@ -268,8 +268,8 @@ input[type=text]:focus, textarea:focus {
 .items {
     width: 200px;
     height: 250px;
-    float: left;
-    margin: 0 53px 20px 0;
+    display:inline-block;
+    margin: 0 48px 20px 0;
     overflow: hidden;
     border-radius:14px;
 }
