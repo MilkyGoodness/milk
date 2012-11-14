@@ -47,7 +47,7 @@ $(document).ready(function(){
     });
     
     $(document).scroll(function() {
-        if ($(document).scrollTop() >= 250) {
+        if ($(document).scrollTop() >= 280) {
             $('form, #icons').css('position', 'fixed');
             $('form').css('top', 20);
             $('#icons').css('top', 19);

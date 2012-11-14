@@ -103,7 +103,7 @@ html, body {
     margin: 0 auto;
     z-index: 999;
     top: 0px;
-    z-index: 1000;
+    z-index: 1010;
 }
 
 #milk-kart {
@@ -116,7 +116,7 @@ html, body {
     background: url("../img/milk-kart.png");
     background-size: 400%;
     background-position: 0px;
-    z-index: 1000;
+    z-index: 1010;
 }
 
 /*select#categories {
@@ -131,8 +131,7 @@ html, body {
 
 #icons {
     position: absolute;
-    top: 280px;
-    
+    top: 300px;
     width: 960px;
     height: 45px;
     margin: 0 auto;
@@ -402,6 +401,7 @@ input[type=text]:focus, textarea:focus {
     height: 80px;
     border-radius: 5px;
     border: 5px solid #77c4ff;
+    background: #c2deef;
 }
 
 #checkout .legend {

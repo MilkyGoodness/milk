@@ -82,67 +82,23 @@ html, body {
 
 }
 
-#kart {
-    position: fixed;
-    width: 960px;
-    margin: 0 auto;
-    z-index: 999;
-    top: 0px;
-    z-index: 10;
-}
-
-#milk-kart {
+#fb-icon, #twitter-icon {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 20px;
-    right: 25px;
-    margin: 0 auto;
-    background: url("../img/milk-kart.png");
-    background-size: 400%;
-    background-position: 0px;
+    width: 32px;
+    height: 32px;
+    top: 30px;
+    left: 30px;
+    background: url("../img/fb-icon.png");
+    border-radius: 5px;
 }
 
-select#categories {
-    position: relative;
-    top: 130px;
-    left: 250px;
-    width: 150px;
-    font-size: 25px;
-    display: none;
-    z-index: 10;
-}
-
-select#sort-by{
-    position: relative;
-    top: 130px;
-    left: 400px;
-    width: 150px;
-    font-size: 25px;
-    display: none;
-    z-index: 10;
-}
-
-#notification {
-    position: absolute;
-    width: 153px;
-    height: 29px;
-    top: 25px;
-    right: 67px;
-    margin: 0 auto;
-    background: url("../img/notification.png");
-    background-size: 100%;
-    display: none;
-    z-index: 10;
-}
-
-
-
-.twitter-follow-button {
+#twitter-icon {
     position: absolute;
     top: 30px;
-    left: 170px;
+    left: 70px;
+    background: url("../img/twitter-icon.png");
 }
+
 
 /* Form fields ------------------------------ */
 form {
@@ -154,14 +110,7 @@ form {
     z-index: 10;
 }
 
-.af-outer {
-    overflow: hidden;
-    height: 70px;
-    box-shadow: 0 1px 0 #f5f5f5 inset;
-    transition: all 0.5s linear;
-}
-
-#search-box {
+#email-box {
     position: relative;
     padding: 10px 15px 10px 15px;
     width: 465px;
