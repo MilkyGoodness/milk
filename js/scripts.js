@@ -40,11 +40,13 @@ $(document).ready(function(){
             $("#popular-list, .popular-list-edit").fadeIn();
             $("#categories, #price").fadeOut();
         }
+        
+        
     });
 
     $(window).unload(function() {
         $('body').scrollTop(0);
-    });
+    });   
     
     $(document).scroll(function() {
         if ($(document).scrollTop() >= 280) {
@@ -76,7 +78,50 @@ $(document).ready(function(){
     // NOTE:: need to clear cache after making changes
     $(".items li#demo-1").click(function() {
         localStorage.setItem('checkoutData','[{id:3,name:"Starbucks Breakfast Blend",start_date:"2012-07-11",freq:2}]');
-    });
+    });   
+    
 
+    $("#search-box").keyup($.debounce( 500, function() {
+
+		if ($("#search-box").val().length > 1)
+		{
+			$.get(
+			  'samples/sampleItemSearch.php',
+			  { q: $("#search-box").val() },
+			  function(data) {				
+				//console.log(data);
+
+				html ='';
+                var items = 0;
+                var exitClose = false;
+				for(key in data)
+				{
+					if(data[key].price != null )
+					{
+                        if(items%4 == 0) {
+                            html += '<ul>';
+                            exitClose = true;
+                        }
+                        items++;
+						html += '<li id="'+data[key].sku+'" class="items">';
+						html += '<img src="'+data[key].imageUrl+'" alt="" style="max-width:200px; max-height:250px;"/>';
+						html += '<div class="detail"><div class="price">'+data[key].price+'</div><div class="title">'+data[key].title+'</div></div>';
+						html += '</li>';
+                        if(items%4 == 0) {
+                            html += '</ul>';
+                            exitClose = false;
+                        }
+					}
+				}
+                if(exitClose) {
+                    html += '</ul>';
+                }
+				$('#item-list').html(html);
+				$('#item-list').show();
+			  },
+			  'json'
+			);	
+		}
+	}));
 });
 
