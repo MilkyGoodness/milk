@@ -44,6 +44,7 @@ body, html {
     color: #232323;
     font-size: 62.5%;
     font-family: 'Asap', Helvetica, sans-serif;
+    background: #77C4FF;
 }
 
 #wrapper {
@@ -64,7 +65,7 @@ body, html {
 
 #logo {
     position: absolute;
-    top: 150px;
+    top: 120px;
     left: 50%;
     z-index: 10;
     margin-left: -93px;
@@ -74,6 +75,17 @@ body, html {
     background-size: 100%;
     -webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));
     filter: url(shadow.svg#drop-shadow);
+}
+
+#steps, #steps2 {
+    position: relative;
+    width: 440px;
+    height: 140px;
+    background: url("../img/steps.png");
+}
+
+#steps2 {
+    background: url("../img/steps2.png");
 }
 
 #fb-icon, #twitter-icon {
@@ -97,11 +109,11 @@ body, html {
 ------------------------------------------------------------ */
 #content {
     position: absolute;
-    top: 300px;
+    top: 270px;
     left: 50%;
     margin-left: -300px;
     width: 600px;
-    height: 400px;
+    height: 540px;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
@@ -273,6 +285,10 @@ button:active {
 @media only screen and (min-width: 80px) and (max-width: 767px) {
 .mobile {
     display: block !important;
+}
+
+#steps, #steps2 {
+    display: none;
 }
 
 #logo {
