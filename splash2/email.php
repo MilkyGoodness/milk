@@ -4,21 +4,18 @@ ini_set('display_errors',1);
 include('config.php');
 try
 {
-        $email = $_POST['customer-email'];
+        $email = trim($_POST['email']);        
         
-        if(!preg_match('\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b',$email))
+        if(!preg_match('/[A-Za-z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/',$email))
         {
            throw new Exception('Invalid Email');
         }
         
-	if(isset($_POST['store']))
+        $store = $_POST['store'];
+	if(empty($store))
 	{
-		$store = $_POST['store'];
+            $store = '';
 	}	
-	else
-	{
-		$store = '';
-	}
         
 	$sqlite_db = new PDO('sqlite:'.DB_PATH,DB_USER,DB_PASS);
 		
@@ -37,7 +34,7 @@ try
 	    )                
 	);
 	
-	echo "DONE";        
+	echo "done";        
 
 
 
@@ -47,21 +44,3 @@ catch(Exception $e)
 {
 	echo 'Error: '.$e->getMessage();
 }
-?>
-<!DOCTYPE HTML>
-<html lang="en">
-	<head>
-		<title>Milk Table</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-</head>
-<body>
-<form action="" method="post">
-EMail:<input type="text" name="customer-email" />
-Name:<input type="text" name="store" />
-<input type="submit" value="submit" />
-</form>
-</body>
-</html>
-
-
-

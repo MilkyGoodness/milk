@@ -29,11 +29,31 @@ $(document).ready(function(){
         });
     });
 
-// Thank you
+// Submit and Thank you
     $("button").click(function() {
+        var jThis = $(this);
+        var attrName = jThis.attr('value').split('-')[0];        
+        
+        var email = $('input[name='+attrName+'-email]').val();
+        var store = $('input[name=store]').val();
 
-        $("#thank-you").fadeIn(200);
+        if(store == null) store = '';
+        
+        $.post('email.php',{"email":email,"store":store},        
+            function(data) {
+                if(data == 'done')
+                {
+                    alert($("#thank-you").html());
+                }
+                else
+                {
+                    alert("We have encounter an error. Give us a minute");
+                }                    
+         });
+             
     });
+    
+
 
 }); /* End doc.ready */
 
