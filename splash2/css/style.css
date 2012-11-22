@@ -65,7 +65,7 @@ body, html {
 
 #logo {
     position: absolute;
-    top: 120px;
+    top: 90px;
     left: 50%;
     z-index: 10;
     margin-left: -93px;
@@ -73,8 +73,8 @@ body, html {
     height: 86px;
     background: url("../img/logo.png");
     background-size: 100%;
-    -webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));
-    filter: url(shadow.svg#drop-shadow);
+    /*-webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));
+    filter: url(shadow.svg#drop-shadow);*/
 }
 
 #steps, #steps2 {
@@ -109,15 +109,14 @@ body, html {
 ------------------------------------------------------------ */
 #content {
     position: absolute;
-    top: 270px;
+    top: 240px;
     left: 50%;
     margin-left: -300px;
     width: 600px;
     height: 540px;
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
-
+    /*box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);*/
 }
 
 #content-container {
@@ -176,12 +175,19 @@ h3:hover {
     color: #333;
 }
 
-#thank-you {
+#thank-you, #email-check {
     position: absolute;
-    top: 235px;
+    top: 375px;
     left: 295px;
     display: none;
-    float: left;
+    font-style: italic;
+}
+
+#thank-you-customer, #email-check-customer {
+    position: absolute;
+    top: 388px;
+    left: 275px;
+    display: none;
     font-style: italic;
 }
 
@@ -387,6 +393,10 @@ button {
     background-size: 100%;
     margin-bottom: 15px;
 }
+
+#thank-you, #email-check, #thank-you-customer, #email-check-customer {
+    display: none;
+}
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
@@ -404,6 +414,5 @@ button {
     width: 240px;
     display: inline-block;
 }
-
 
 }
