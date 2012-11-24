@@ -115,7 +115,7 @@ body, html {
     width: 600px;
     height: 540px;
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.9);
+    background: #fff;
     /*box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);*/
 }
 
@@ -214,8 +214,8 @@ input[type=text] {
     width: 315px;
     border: none;
     border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.3);
     color: #666;
     font-size: 14px;
 }
@@ -232,12 +232,12 @@ input[type=text] {
 
 input[type=text]:focus, textarea:focus {
     outline: none;
-    -webkit-box-shadow: 0 0 16px rgba(100, 100, 100, 0.1),
-    inset 0 1px 2px rgba(0, 0, 0, 0.3); 
-    -moz-box-shadow: 0 0 16px rgba(100, 100, 100, 0.1),
-    inset 0 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 0 4px 2px rgba(150, 150, 150, 0.1),
-    inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 4px 2px rgba(100, 100, 100, 0.1),
+    inset 0 1px 6px rgba(0, 0, 0, 0.3); 
+    -moz-box-shadow: 0 0 4px 2px rgba(100, 100, 100, 0.1),
+    inset 0 1px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 6px 4px rgba(100, 100, 100, 0.1),
+    inset 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Buttons
@@ -307,7 +307,7 @@ button:active {
     height: 74px;
     background: url("../img/logo.png");
     background-size: 100%;
-    -webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));
+    /*-webkit-filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.2));*/
     filter: url(shadow.svg#drop-shadow);
 }
 
@@ -321,6 +321,7 @@ button:active {
 }
 
 #content-container {
+    position: relative;
     width: 450px;
     margin: 0 auto;
 }
@@ -394,9 +395,20 @@ button {
     margin-bottom: 15px;
 }
 
-#thank-you, #email-check, #thank-you-customer, #email-check-customer {
-    display: none;
+#thank-you, #email-check {
+    display:block;
+    top: 195px;
+    left: 170px;
+    line-height: 15px;
 }
+
+#thank-you-customer, #email-check-customer {
+    display:block;
+    top: 203px;
+    left: 130px;
+    line-height: 15px;
+}
+
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
@@ -413,6 +425,18 @@ button {
     left: 0;
     width: 240px;
     display: inline-block;
+}
+
+#thank-you, #email-check {
+    top: 290px;
+    left: 150px;
+    line-height: 15px;
+}
+
+#thank-you-customer, #email-check-customer {
+    top: 305px;
+    left: 130px;
+    line-height: 15px;
 }
 
 }
