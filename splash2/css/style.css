@@ -396,14 +396,12 @@ button {
 }
 
 #thank-you, #email-check {
-    display:block;
     top: 195px;
     left: 170px;
     line-height: 15px;
 }
 
 #thank-you-customer, #email-check-customer {
-    display:block;
     top: 203px;
     left: 130px;
     line-height: 15px;
