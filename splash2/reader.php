@@ -42,9 +42,11 @@ else:
 <col width="400" />
 <col width="250" />
 <col width="250" />
+<col width="250" />
 <tr>
 <th>Email</th>
 <th>Store</th>
+<th>IP</th>
 <th>Submitted At</th>
 </tr>
 <?php 
@@ -53,6 +55,7 @@ foreach($rows as $row) {
 echo '<tr>';
 echo '<td>'.$row['customer_email'].'</td>';
 echo '<td>'.$row['store_name'].'</td>';
+echo '<td>'.$row['ip'].'</td>';
 echo '<td>'.$row['time'].'</td>';
 echo '</tr>';
 }

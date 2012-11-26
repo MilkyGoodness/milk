@@ -49,6 +49,7 @@ $(document).ready(function(){
                 else
                 {
                     $("#email-check-"+attrName).show();
+                    $("#thank-you-"+attrName).hide();
                 }                    
          });
              

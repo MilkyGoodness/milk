@@ -19,8 +19,8 @@ try
         
 	$sqlite_db = new PDO('sqlite:'.DB_PATH,DB_USER,DB_PASS);
 		
-	$insert = "REPLACE INTO emails (id, customer_email, store_name, time) 
-		    VALUES (:id, :customer_email, :store_name, :time)";
+	$insert = "REPLACE INTO emails (id, customer_email, store_name, ip, time) 
+		    VALUES (:id, :customer_email, :store_name, :ip, :time)";
 
 	$upsert =$sqlite_db->prepare($insert);      
 
@@ -30,6 +30,7 @@ try
 		':id' => null, 
 		':customer_email' => $email, 
 		':store_name' => $store,
+                ':ip' => $_SERVER['REMOTE_ADDR'],
 		':time'  => date('Y-m-d H:i:s',time())
 	    )                
 	);
