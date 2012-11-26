@@ -42,12 +42,13 @@ $(document).ready(function(){
         $.post('email.php',{"email":email,"store":store},        
             function(data) {
                 if(data == 'done')
-                {
-                    alert($("#thank-you").html());
+                {                    
+                    $("#thank-you-"+attrName).show();
+                    $("#email-check-"+attrName).hide();
                 }
                 else
                 {
-                    alert("We have encounter an error. Give us a minute");
+                    $("#email-check-"+attrName).show();
                 }                    
          });
              

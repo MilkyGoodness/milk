@@ -175,7 +175,7 @@ h3:hover {
     color: #333;
 }
 
-#thank-you, #email-check {
+#thank-you-consumer, #email-check-consumer {
     position: absolute;
     top: 375px;
     left: 295px;
